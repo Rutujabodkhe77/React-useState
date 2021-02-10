@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// *******This is useState function ##useState:button click change h1 value (using function) *******
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import React, {Component,useState} from 'react';
+function App()
+{
+  const [my_name,changeMyName]=useState("react js");
+  const [my_age,changeMyAge]=useState(24);
+
+const buttonClicked=()=>
+{
+  changeMyName("Wisdom");
 }
 
+  return(
+    <div>
+      
+      <h1> Hello there This is useState function {my_name}</h1>
+      <h2> And My Age Is: {my_age}</h2>
+      <button onClick={buttonClicked}>Change Name </button>
+      </div>
+      );
+}
 export default App;
